@@ -1,17 +1,17 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: process.env.BASE_URL,
+  baseURL: process.env.REACT_APP_BASE_URL,
   headers: {
     "Content-Type": "application/json",
-    "Access-Control-Allow-Origin": process.env.BASE_URL,
+    "Access-Control-Allow-Origin": process.env.REACT_APP_BASE_URL,
   },
   withCredentials: true,
 });
 
-export const getItems = async () => {
+export const register = async (data) => {
   return await api
-    .get("/menuItems")
+    .post("/auth/register",data)
     .then((response) => response)
     .catch((error) => {
       return error.response;

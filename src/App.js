@@ -5,6 +5,7 @@ import Navbar from "./components/home/Navbar";
 import Products from "./pages/dashboard/Products";
 import Sales from "./pages/dashboard/Sales";
 import Upload from "./pages/dashboard/Upload";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="/dashboard/products" element={<Products />} />
           <Route path="/dashboard/sales" element={<Sales />} />
           <Route path="/dashboard/upload" element={<Upload/>} />
+          <Route path="/register" element={<Register/>} />
+
           
         </Routes>
       </Router>

@@ -4,7 +4,7 @@ import { IoIosSettings } from "react-icons/io";
 import { AiFillLike } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";
 import Table from "../../components/dashboard/products/Table";
-import { getItems } from "../../apis";
+// import { getItems } from "../../apis";
 import { useStore } from "../../store";
 
 
@@ -81,7 +81,7 @@ const updateProducts = useStore((state) => state.updateProducts)
 const products = useStore((state) => state.products)
   
 useEffect(()=>{
-     updateProducts(50);
+     updateProducts(products);
 
    
 
@@ -99,12 +99,12 @@ useEffect(()=>{
   const fetchData = async () => {
     setLoading(true);
 
-    const data =  await getItems();
+    // const data =  await getItems();
     
 
  
     setLoading(false);
-    setItems(data);
+    // setItems(data);
   };
   return (
     <Dashboard>
