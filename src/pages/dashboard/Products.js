@@ -81,7 +81,7 @@ const updateProducts = useStore((state) => state.updateProducts)
 const products = useStore((state) => state.products)
   
 useEffect(()=>{
-     updateProducts(products);
+     updateProducts(items.length);
 
    
 

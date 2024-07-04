@@ -7,3 +7,10 @@ export const useStore = create((set) => ({
 //   removeAllBears: () => set({ bears: 0 }),
   updateProducts: (newProducts) => set({ products: newProducts }),
 }))
+
+export const useProduct = create((set) => ({
+  product: {},
+//   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
+//   removeAllBears: () => set({ bears: 0 }),
+  setProduct: (newProduct) => set({ product: newProduct }),
+}))

@@ -6,6 +6,8 @@ import Products from "./pages/dashboard/Products";
 import Sales from "./pages/dashboard/Sales";
 import Upload from "./pages/dashboard/Upload";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Edit from "./pages/dashboard/Edit";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/dashboard/sales" element={<Sales />} />
           <Route path="/dashboard/upload" element={<Upload/>} />
           <Route path="/register" element={<Register/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="dashboard/edit/:id" element={<Edit />} />
 
           
         </Routes>

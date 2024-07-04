@@ -17,3 +17,12 @@ export const register = async (data) => {
       return error.response;
     });
 };
+
+export const login = async (data) => {
+  return await api
+    .post("/auth/login",data)
+    .then((response) => response)
+    .catch((error) => {
+      return error.response
+    });
+}
